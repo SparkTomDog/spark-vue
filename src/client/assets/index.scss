@@ -1,0 +1,128 @@
+* {
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #858585;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #5b5b5b;
+    }
+}
+
+html, body, #app {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.aside_btn {
+    width: 30px;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.document_path {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.icon_btn_30 {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+    margin-right: 5px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #e4e4e4;
+    }
+}
+
+.tree_search {
+    height: 30px;
+}
+
+.tree_data {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    .tree_data_icon {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s;
+        margin-right: 5px;
+    
+        &:hover {
+            cursor: pointer;
+            background-color: #e4e4e4;
+        }
+    }
+
+    .tree_data_label {
+        flex: 1;
+    }
+}
+
+.el-container {
+    width: 100%;
+    height: 100%;
+
+    .el-header {
+        padding: 0;
+    }
+
+    .el-main {
+        padding: 0;
+    }
+}
+
+#Header {
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#Contriner {
+
+    &Aside {
+        min-width: 200px;
+        transition: all 0.3s;
+
+        .el-container {
+            .el-header {
+                height: 30px;
+                display: flex;
+                align-items: center;
+                
+            }
+        }
+    }
+
+    &Main {
+        .el-header {
+            height: 30px;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+#CategoryInfo {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+}

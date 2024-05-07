@@ -1,0 +1,14 @@
+declare module '@editorjs/quote';
+declare module '@editorjs/delimiter';
+declare module 'editorjs-paragraph-with-alignment';
+declare module 'editorjs-header-with-anchor';
+declare module '@editorjs/nested-list';
+declare module '@editorjs/checklist';
+declare module '@editorjs/table';
+declare module 'editorjs-codemirror';
+declare module '@editorjs/inline-code';
+declare module 'editorjs-tooltip';
+declare module 'editorjs-text-color-plugin';
+declare module 'editorjs-undo';
+declare module 'editorjs-drag-drop';
+declare module '@editorjs/underline';
