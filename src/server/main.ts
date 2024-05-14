@@ -2,7 +2,7 @@ import express from "express";
 import ViteExpress from "vite-express";
 import cors from 'cors'
 import dataRouter from '@s/router/data.js'
-import { dataInit } from '@s/common/DataInit.js'
+import { dataInit } from "./common/DataInit.js";
 
 const app = express();
 const port = 3000

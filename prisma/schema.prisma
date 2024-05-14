@@ -11,11 +11,10 @@ datasource db {
 }
 
 model DataModel {
-    id        String      @id @default(uuid())
-    label     String      @unique
-    content   String?
-    type      String      @default("folder")
-    parentId  String?
-    parent    DataModel?  @relation("dataFormThis", fields: [parentId], references: [id], onDelete: Restrict, onUpdate: Cascade)
-    documents DataModel[] @relation("dataFormThis")
+    id       String  @id @default(uuid())
+    label    String  @unique
+    content  String?
+    updateAt String?
+    createAt String?
+    deleteAt String?
 }

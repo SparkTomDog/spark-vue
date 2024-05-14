@@ -3,7 +3,8 @@
     height: 100%;
 
     &_label {
-        height: 30px;
+        height: 40px;
+        width: 100%;
         display: flex;
 
         input {
@@ -12,8 +13,14 @@
             outline: none;
             border: none;
             box-sizing: border-box;
-            text-align: center;
             font-size: 18px;
+            font-weight: bold;
+            color: #535353;
+            text-align: center;
+
+            &::placeholder {
+                color: #ccc;
+            }
         }
     }
 }

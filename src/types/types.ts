@@ -1,9 +1,6 @@
-import { OutputData } from "@editorjs/editorjs"
-
 export interface BaseDataType {
     id?: string
-    label?: string
-    content?: OutputData | null | string
-    type?: string
+    label: string
+    content: string | undefined
     [x: string]: any
 }

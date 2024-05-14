@@ -1,10 +1,10 @@
 <template>
     <el-container class="editor">
         <el-header class="editor_label">
-            <input type="text" v-model="documentStore.currentDocument.label" placeholder="在此键入标题">
+            <input type="text" v-model="data.label" placeholder="在此键入标题">
         </el-header>
         <el-main class="editor_content">
-            <div :id="editorId"></div>
+            <div :id="data.id"></div>
         </el-main>
     </el-container>
 </template>
@@ -18,12 +18,16 @@ import DragDrop from 'editorjs-drag-drop';
 import I18N from './I18N';
 import { useDocumentStore } from '@c/store/document';
 import { onMounted, ref } from "vue";
+import { BaseDataType } from "@t/types";
 
+const props = defineProps<{
+    data: BaseDataType
+}>()
+const data = ref<BaseDataType>(props.data)
 const documentStore = useDocumentStore()
-const editorId = ref<string>("SparkEditor")
 const editor = new EditorJS({
-    holder: editorId.value,
-    tools: Toolbar(editorId.value),
+    holder: data.value.id,
+    tools: Toolbar(data.value.id as string),
     i18n: I18N,
     placeholder: "在此键入内容...",
     autofocus: true,
@@ -32,12 +36,8 @@ const editor = new EditorJS({
         new DragDrop(editor);
     },
     async onChange(api, event) {
-        documentStore.currentDocument.content = await api.saver.save()
+        data.value.content = await api.saver.save()
     },
-    data: documentStore.currentDocument.content as OutputData || undefined
+    data: data.value.content as OutputData || null
 });
-
-onMounted(() => {
-    documentStore.editor = editor
-})
 </script>

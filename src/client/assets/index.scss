@@ -20,18 +20,6 @@ html, body, #app {
     padding: 0;
 }
 
-.aside_btn {
-    width: 30px;
-    height: 100%;
-    margin-right: 10px;
-}
-
-.document_path {
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
 .icon_btn_30 {
     width: 30px;
     height: 30px;
@@ -40,6 +28,7 @@ html, body, #app {
     justify-content: center;
     transition: all 0.4s;
     margin-right: 5px;
+    border-radius: 5px;
 
     &:hover {
         cursor: pointer;
@@ -47,82 +36,82 @@ html, body, #app {
     }
 }
 
-.tree_search {
-    height: 30px;
-}
-
-.tree_data {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-
-    .tree_data_icon {
-        width: 30px;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.4s;
-        margin-right: 5px;
-    
-        &:hover {
-            cursor: pointer;
-            background-color: #e4e4e4;
-        }
-    }
-
-    .tree_data_label {
-        flex: 1;
-    }
-}
-
 .el-container {
     width: 100%;
     height: 100%;
-
-    .el-header {
-        padding: 0;
-    }
 
     .el-main {
         padding: 0;
     }
 }
 
-#Header {
-    height: 30px;
-    display: flex;
-    align-items: center;
-}
-
 #Contriner {
 
     &Aside {
-        min-width: 200px;
-        transition: all 0.3s;
-
-        .el-container {
-            .el-header {
-                height: 30px;
-                display: flex;
-                align-items: center;
-                
-            }
-        }
+        background-color: rgba(235, 250, 236, 0.76);
+        box-sizing: border-box;
     }
+}
 
-    &Main {
-        .el-header {
-            height: 30px;
-            display: flex;
-            align-items: center;
+#ContrinerMainHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    height: 40px;
+    padding-left: 10px;
+
+    #ContrinerMainHeaderLabel {
+        width: 50%;
+        height: 100%;
+
+        input {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border: none;
+            outline: none;
+            font-size: 18px;
         }
     }
 }
 
-#CategoryInfo {
-    width: 100%;
-    height: 100%;
-    padding: 50px;
+#ContrinerAside {
+    display: flex;
+    flex-direction: column;
+    
+    #ContrinerAsideSop {
+        flex: 1;
+    }
+
+    #ContrinerAsideAdd {
+        height: 40px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .el-button {
+            width: 80%;
+        }
+    }
+}
+
+#DocumentList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .list_label {
+            flex: 1;
+            cursor: pointer;
+        }
+    }
 }

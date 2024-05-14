@@ -3,8 +3,7 @@ import { defineStore } from 'pinia'
 const useWebStore = defineStore("web", {
     state: () => ({
         contrinerPageAsideShow: true,
-        contrinerPageAsideWidth: 300,
-        createDataInputBoxShow: false
+        contrinerPageAsideWidth: 300
     }),
     actions: {
         /**
@@ -21,12 +20,6 @@ const useWebStore = defineStore("web", {
          */
         setContrinerPageAsideWidth(width: number) {
             this.contrinerPageAsideWidth = width
-        },
-        /**
-         * 切换创建数据弹窗的显示或者隐藏
-         */
-        toggleCreateDataInputBoxShow() {
-            this.createDataInputBoxShow = !this.createDataInputBoxShow
         }
     },
     persist: true
